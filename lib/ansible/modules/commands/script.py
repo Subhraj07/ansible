@@ -87,4 +87,14 @@ EXAMPLES = r'''
   script: /some/local/script.py
   args:
     executable: python3
+
+- name: Run a script using python executable with arguements
+  script: /some/local/script.py arg1 arg2
+  args:
+    executable: python3
+    
+- name: Run a script using python executable with arguements defined in ansible
+  script: /some/local/script.py "{{ arg1 }}" "{{ arg2 }}"
+  args:
+    executable: python3
 '''
